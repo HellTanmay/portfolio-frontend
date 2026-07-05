@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-violet-500/15 blur-[150px]" />
       </div>
 
-      <div className="mx-auto w-full max-w-[1650px] px-8 lg:px-16 xl:px-24">
+      <div className="mx-auto w-full max-w-[1650px] px-8 lg:px-16 xl:px-24 mb-10">
         <div className="grid items-center gap-16 lg:grid-cols-5 xl:gap-28">
           {/* LEFT */}
 
@@ -172,7 +172,7 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-4xl text-cyan-400">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce text-4xl text-cyan-400 ">
         <HiOutlineArrowDown />
       </div>
     </section>

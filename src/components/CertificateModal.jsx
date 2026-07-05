@@ -37,26 +37,26 @@ export default function CertificateModal({
           duration: 0.3,
         }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-slate-800 bg-slate-900"
+        className="relative h-[95vh] w-full max-w-6xl overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 md:h-auto md:rounded-3xl"
       >
         {/* Close */}
 
         <button
           onClick={onClose}
-          className="absolute right-6 top-6 rounded-full border border-slate-700 p-3 transition hover:border-cyan-400"
+          className="absolute right-4 top-4 md:right-6 md:top-6 rounded-full border border-slate-700 p-3 transition hover:border-cyan-400"
         >
           <FaTimes />
         </button>
 
-        <div className="grid lg:grid-cols-2">
+        <div className="grid h-full md:grid-cols-2">
 
           {/* LEFT */}
 
-          <div className="p-10">
+          <div className="overflow-y-auto p-6 md:p-10">
 
             <div className="flex items-center gap-4">
 
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-3xl text-cyan-400">
+              <div className="flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-2xl text-cyan-400 md:text-3xl">
 
                 <certificate.icon />
 
@@ -92,7 +92,7 @@ export default function CertificateModal({
 
             </p>
 
-            <div className="mt-10 flex gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
 
               <a
                 href={certificate.certificate}
@@ -127,7 +127,7 @@ export default function CertificateModal({
 
               <iframe
                 src={certificate.certificate}
-                className="h-[650px] w-full"
+                className="h-[50vh] w-full md:h-[700px]"
                 title={certificate.title}
               />
 
@@ -136,7 +136,7 @@ export default function CertificateModal({
               <img
                 src={certificate.certificate}
                 alt={certificate.title}
-                className="h-[650px] w-full object-contain p-8"
+                className="h-[50vh] w-full object-contain p-4 md:h-[700px] md:p-8"
               />
 
             )}
